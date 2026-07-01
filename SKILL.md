@@ -53,8 +53,8 @@ Hook-Enforcement statt Hook-Ausfuehrung: Ein Claude-Code-Hook ist ein einfacher 
 
 ### 2. Dokument/Design-Critique-Loop (Slides, Praesentationen, Dokumente)
 
-- **Builder:** erstellt den Entwurf gegen ein dokumentiertes Design-Kit (Farb-/Typo-Tokens + Layout-Archetypen + Checkliste — kein Bauchgefuehl, kein proprietaeres Drittsystem als Blackbox).
-- **Verifier:** prueft Fidelity gegen das Design-Kit, nicht gegen einen subjektiven Geschmack.
+- **Builder:** erstellt den Entwurf gegen ein dokumentiertes Design-Kit (Farb-/Typo-Tokens + Layout-Archetypen + Checkliste — kein Bauchgefuehl, kein proprietaeres Drittsystem als Blackbox). Das Design-Kit selbst entsteht ueber eine **Abfrage** (Farbpalette, Typografie, Effekte, Footer-Logik, Layout-Archetypen, Format), nicht durch Kopieren eines fremden Kits — siehe [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md) fuer den vollstaendigen Fragenkatalog samt Beispiel-Kit.
+- **Verifier:** prueft Fidelity gegen das (per Abfrage erstellte) Design-Kit, nicht gegen einen subjektiven Geschmack.
 - **Stop-Bedingung:** Quality-Streak N=1.
 
 ### 3. Code-Security-Quality-Loop

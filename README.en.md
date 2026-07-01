@@ -40,7 +40,7 @@ AI tools generate in one shot — good, mediocre, sometimes off, with nobody (hu
 | **Document/Design** | builds against a documented design kit (color/type tokens, layout archetypes) | checks fidelity against the kit | Quality Streak N=1 |
 | **Code/Security** | writes/changes code | security audit at a severity threshold + code-quality review, complemented by a free instant pattern check (regex, no LLM call) | Fixed Cap N=3 + Quality Streak N=2 |
 
-These recipes are templates, not finished skills — they need project-specific knowledge (your brand voice, your design system, your security standard) to actually work. Details in [`SKILL.md`](SKILL.md).
+These recipes are templates, not finished skills — they need project-specific knowledge (your brand voice, your design system, your security standard) to actually work. Details in [`SKILL.md`](SKILL.md). For the document/design recipe there's a complete, generic reference implementation including an intake questionnaire: [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md).
 
 ---
 
@@ -77,6 +77,7 @@ See [`AGENTS.md`](AGENTS.md) — a working instruction specifically for an AI co
 | [`SETUP.md`](SETUP.md) | Concrete setup steps |
 | [`AGENTS.md`](AGENTS.md) | Instruction for AI coding agents |
 | [`examples/security-pattern-check.py`](examples/security-pattern-check.py) | Example hook for the code-security-quality loop (instant regex checks, no LLM call) |
+| [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md) | Reference implementation for the document/design critique loop (generic intake questionnaire + verifier checklist) |
 | [`LICENSE`](LICENSE) | License (CC BY 4.0) |
 | [`NOTICE`](NOTICE) | Attribution notice — also credits the inspiration source |
 
