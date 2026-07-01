@@ -1,0 +1,21 @@
+Loop Library
+Copyright (c) 2026 Claus Zeißler
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
+Full license text: see the LICENSE file or
+https://creativecommons.org/licenses/by/4.0/
+
+ATTRIBUTION
+When you share or adapt this work, you must give appropriate credit to
+"Claus Zeißler / Loop Library", provide a link to the license, and
+indicate if changes were made.
+
+INSPIRATION
+The general loop concept (trigger/action/verify/stop, self-paced vs.
+fixed-interval) was inspired by Matthew Berman's (Forward Future) Loop
+Library: https://signals.forwardfuture.ai/loop-library/
+No text or tables from that source or from the community mirror
+az9713/loop-library were copied — only the general, non-copyrightable
+concept was independently described and developed into the
+domain recipes in this repo.
