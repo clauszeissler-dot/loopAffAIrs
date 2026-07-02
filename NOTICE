@@ -19,3 +19,12 @@ No text or tables from that source or from the community mirror
 az9713/loop-library were copied — only the general, non-copyrightable
 concept was independently described and developed into the
 domain recipes in this repo.
+
+THIRD-PARTY CONTENT
+The security pattern list in examples/security-pattern-check.py is
+derived from the "security-guidance" plugin in
+anthropics/claude-plugins-official
+(https://github.com/anthropics/claude-plugins-official), licensed
+under the Apache License 2.0
+(https://www.apache.org/licenses/LICENSE-2.0). The warning messages
+were rewritten in German; the detection patterns were adapted.

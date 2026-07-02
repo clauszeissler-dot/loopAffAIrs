@@ -36,8 +36,8 @@ KI-Tools generieren in einem Schuss — gut, mittelmäßig, manchmal daneben, oh
 
 | Domäne | Builder | Verifier | Stop-Bedingung |
 |---|---|---|---|
-| **Content/Text** | schreibt den Entwurf | prüft gegen eine faktenbasierte, regelmäßig aktualisierte Checkliste (siehe Fixed-Interval-Modus) | Quality-Streak N=1 |
-| **Dokument/Design** | baut gegen ein dokumentiertes Design-Kit (Farb-/Typo-Tokens, Layout-Archetypen) | prüft Fidelity gegen das Kit | Quality-Streak N=1 |
+| **Content/Text** | schreibt den Entwurf | prüft gegen eine faktenbasierte, regelmäßig aktualisierte Checkliste (siehe Fixed-Interval-Modus) | Quality-Streak N=1 + Fixed Cap N=2 |
+| **Dokument/Design** | baut gegen ein dokumentiertes Design-Kit (Farb-/Typo-Tokens, Layout-Archetypen) | prüft Fidelity gegen das Kit | Quality-Streak N=1 + Fixed Cap N=2 |
 | **Code/Security** | schreibt/ändert Code | Security-Audit bei Severity-Threshold + Code-Quality-Review, ergänzt um einen kostenlosen Instant-Pattern-Check (Regex, kein LLM-Call) | Fixed Cap N=3 + Quality-Streak N=2 |
 
 Die Rezepte sind Vorlagen, keine fertigen Skills — sie brauchen projektspezifisches Wissen (eure Brand-Voice, euer Design-System, euer Security-Standard), um wirklich zu greifen. Details in [`SKILL.md`](SKILL.md). Für das Dokument/Design-Rezept gibt es eine vollständige, generische Referenzimplementierung inkl. Fragenkatalog: [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md).

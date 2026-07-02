@@ -36,8 +36,8 @@ AI tools generate in one shot — good, mediocre, sometimes off, with nobody (hu
 
 | Domain | Builder | Verifier | Stop condition |
 |---|---|---|---|
-| **Content/Text** | writes the draft | checks against a fact-grounded, regularly refreshed checklist (see Fixed-Interval mode) | Quality Streak N=1 |
-| **Document/Design** | builds against a documented design kit (color/type tokens, layout archetypes) | checks fidelity against the kit | Quality Streak N=1 |
+| **Content/Text** | writes the draft | checks against a fact-grounded, regularly refreshed checklist (see Fixed-Interval mode) | Quality Streak N=1 + Fixed Cap N=2 |
+| **Document/Design** | builds against a documented design kit (color/type tokens, layout archetypes) | checks fidelity against the kit | Quality Streak N=1 + Fixed Cap N=2 |
 | **Code/Security** | writes/changes code | security audit at a severity threshold + code-quality review, complemented by a free instant pattern check (regex, no LLM call) | Fixed Cap N=3 + Quality Streak N=2 |
 
 These recipes are templates, not finished skills — they need project-specific knowledge (your brand voice, your design system, your security standard) to actually work. Details in [`SKILL.md`](SKILL.md). For the document/design recipe there's a complete, generic reference implementation including an intake questionnaire: [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md).
