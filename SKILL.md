@@ -41,7 +41,7 @@ Jeder Loop besteht aus genau drei Rollen:
 | **Self-Paced** | Der Loop wählt sein eigenes Tempo und stoppt selbst, sobald die Stop-Bedingung erfüllt ist. Standard für alle drei Domänen-Rezepte unten. |
 | **Fixed-Interval** | Läuft mechanisch auf einem festen Zeitplan (z. B. wöchentlich), ohne sich selbst zu beenden — für wiederkehrende Prüfungen, nicht für "bis fertig". Beispiel: ein wöchentlicher Check, ob sich die externe Wissensbasis eines Verifiers geändert hat (siehe Content-Loop unten). |
 
-Hook-Enforcement statt Hook-Ausführung: Ein Claude-Code-Hook ist ein einfacher Shell-Befehl, kein Agenten-Orchestrator. Ein Hook soll den Loop daher **anstoßen** (Kontext injizieren: "nutze jetzt den passenden Loop"), nicht selbst die Builder/Verifier-Runden fahren. Die eigentliche Iteration läuft als normale Agenten-Session oder als orchestriertes Multi-Agent-Workflow.
+Hook-Enforcement statt Hook-Ausführung: Ein Claude-Code-Hook ist ein einfacher Shell-Befehl, kein Agenten-Orchestrator. Ein Hook soll den Loop daher **anstoßen** (Kontext injizieren: "nutze jetzt den passenden Loop"), nicht selbst die Builder/Verifier-Runden fahren. Die eigentliche Iteration läuft als normale Agenten-Session oder als orchestriertes Multi-Agent-Workflow. Konkretes, sofort nutzbares Beispiel für diesen Ansatz: [`examples/loop-enforcer.py`](examples/loop-enforcer.py) — ein UserPromptSubmit-Hook, der per Regex die Content- bzw. Dokument/Design-Domäne erkennt und non-blocking einen Hinweis auf das passende Rezept injiziert, ohne selbst zu orchestrieren.
 
 ## Domänen-Rezepte
 

@@ -77,6 +77,7 @@ See [`AGENTS.md`](AGENTS.md) — a working instruction specifically for an AI co
 | [`SETUP.md`](SETUP.md) | Concrete setup steps |
 | [`AGENTS.md`](AGENTS.md) | Instruction for AI coding agents |
 | [`examples/security-pattern-check.py`](examples/security-pattern-check.py) | Example hook for the code-security-quality loop (instant regex checks, no LLM call) |
+| [`examples/loop-enforcer.py`](examples/loop-enforcer.py) | Example hook for the content/document-design loop (UserPromptSubmit, detects the domain and nudges toward the matching loop without orchestrating itself) |
 | [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md) | Reference implementation for the document/design critique loop (generic intake questionnaire + verifier checklist) |
 | [`LICENSE`](LICENSE) | License (CC BY 4.0) |
 | [`NOTICE`](NOTICE) | Attribution notice — also credits the inspiration source |

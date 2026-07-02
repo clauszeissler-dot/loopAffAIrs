@@ -77,6 +77,7 @@ Siehe [`AGENTS.md`](AGENTS.md) — eine Arbeitsanweisung speziell für einen KI-
 | [`SETUP.md`](SETUP.md) | Konkrete Einrichtungsschritte |
 | [`AGENTS.md`](AGENTS.md) | Anweisung für KI-Coding-Agenten |
 | [`examples/security-pattern-check.py`](examples/security-pattern-check.py) | Beispiel-Hook für den Code-Security-Quality-Loop (Instant-Regex-Checks, kein LLM-Call) |
+| [`examples/loop-enforcer.py`](examples/loop-enforcer.py) | Beispiel-Hook für Content-/Dokument-Design-Loop (UserPromptSubmit, erkennt die Domäne und stößt den passenden Loop an, orchestriert nicht selbst) |
 | [`examples/slides-design-kit-template.md`](examples/slides-design-kit-template.md) | Referenzimplementierung für den Dokument/Design-Critique-Loop (generischer Fragenkatalog + Verifier-Checkliste) |
 | [`LICENSE`](LICENSE) | Lizenz (CC BY 4.0) |
 | [`NOTICE`](NOTICE) | Attributions-Hinweis — trägt auch die Quellenangabe zur Inspiration |

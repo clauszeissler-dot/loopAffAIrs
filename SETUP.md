@@ -36,6 +36,32 @@ In `~/.claude/settings.json` unter `hooks.PostToolUse` ergänzen:
 }
 ```
 
+## 2b. Domänen-Enforcer als Hook (optional, für Content-/Dokument-Design-Loop)
+
+Ein leichter UserPromptSubmit-Hook erkennt per Regex, ob ein Auftrag nach der Content- oder der Dokument/Design-Domäne klingt, und injiziert non-blocking einen Hinweis auf das passende Rezept — er orchestriert nichts selbst (siehe „Hook-Enforcement statt Hook-Ausführung" in `SKILL.md`). Beispielskript: [`examples/loop-enforcer.py`](examples/loop-enforcer.py).
+
+```bash
+mkdir -p ~/.claude/hooks
+cp examples/loop-enforcer.py ~/.claude/hooks/
+```
+
+In `~/.claude/settings.json` unter `hooks.UserPromptSubmit` ergänzen:
+
+```json
+{
+  "hooks": [
+    {
+      "type": "command",
+      "command": "python3 \"$HOME/.claude/hooks/loop-enforcer.py\"",
+      "timeout": 5,
+      "statusMessage": "Loop-Enforcer (Domänen-Check)"
+    }
+  ]
+}
+```
+
+Die Keyword-Patterns (`DOMAIN_PATTERNS`) und Rezept-Namen sind an dieses Repo angelehnt — bei eigenen/zusätzlichen Domänen entsprechend anpassen.
+
 ## 3. Fixed-Interval-Loop einrichten (optional, für den Content-Critique-Loop)
 
 Wenn der Verifier eines Content-Loops gegen eine externe, sich ändernde Wissensbasis prüft (z. B. ein jährlich/regelmäßig aktualisierter Best-Practice-Report für einen Social-Kanal), lohnt sich ein wiederkehrender Refresh statt einer live-WebSearch bei jedem einzelnen Loop-Durchlauf:
